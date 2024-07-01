@@ -1,15 +1,23 @@
-function speedDetector() {
-    let speed=Number(prompt("enter speed"));
-    let points=0;
-    if (speed < 70){
-        return alert("ok")
-}
-else if ((points = Math.floor(speed - 70) / 5)> 12) {
-    return alert ("License suspended");
-}
-else 
-    return alert( "points: " + points)
+const prompt = require('prompt-sync')({ sigint: true })
 
+const speedDector= (speed) => {
+  const speedLimit = 70
+  const maxPoints = 12
+  const pointsForEvery5Km = 5
+  
+
+  if (speed < speedLimit) {
+    console.log('Ok')
+  } else {
+    const points = Math.floor((speed - speedLimit) / pointsForEvery5Km)
+    if (points > maxPoints) {
+      console.log(`Points: ${points} - License suspended`)
+    } else {
+      console.log(`Points: ${points}`)
+    }
+  }
 }
 
-return speed
+const speed = parseInt(prompt('Enter the speed : '))
+
+speedDector(speed)
