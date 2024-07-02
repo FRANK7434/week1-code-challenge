@@ -1,13 +1,35 @@
-function salaryCalculator() {
-    let basicSalary = Number(prompt("enter basicSalary"))
-    let benefits = Number(prompt("enter benefits"))
-    let payee = Math.floor((basicSalary + benefits) * 0.3)
-    let nhifDeductions = Math.floor(basicSalary * 0.02)
-    let nssfDeductions = Math.floor(basicSalary * 0.12)
-    let grossSalary = Math.floor(basicSalary + benefits)
-    let netSalary = Math.floor(grossSalary - payee - nhifDeductions - nssfDeductions)
-
-    return alert(netSalary)
-}
-return SalaryCalculator;
-
+// Function to calculate and display net salary
+function calculateNetSalary() {
+    // Get the input values
+    let basicSalary = parseFloat(document.getElementById("basic-salary").value);
+    let benefits = parseFloat(document.getElementById("benefits").value);
+  
+    //Calculate payee 
+    let payee = Math.floor((basicSalary + benefits) * 0.3);
+  
+    //Calculate NHIF deductions
+    let NHIFDeductions = Math.floor(basicSalary * 0.01);
+  
+    //Calculate NSSF deductions
+    let NSSFDeductions = Math.floor(basicSalary * 0.14);
+  
+    //Calculate gross salary
+    let grossSalary = Math.floor(basicSalary + benefits);
+  
+    //Calculate net salary
+    let netSalary = grossSalary - payee - NHIFDeductions - NSSFDeductions;
+  
+    //Display the net salary
+    let resultElement = document.getElementById("result");
+    resultElement.innerHTML = `
+      <p>Your P.A.Y.E is ${payee}</p>
+      <p>Your gross salary is ${grossSalary}</p>
+      <p>Your NHIF Deduction is ${NHIFDeductions}</p>
+      <p>Your NSSF Deduction is ${NSSFDeductions}</p>
+      <p>Your net salary is: Ksh. ${netSalary}</p>
+      `;
+  }
+  
+  // Add an event listener to the calculate button
+  let calculateButton = document.getElementById("calculate-button");
+  calculateButton.addEventListener("click", calculateNetSalary);

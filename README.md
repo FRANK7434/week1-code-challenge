@@ -1,3 +1,20 @@
+# softwares  used to develop the program 
+
+## HTML 
+
+I will use this to prompt the user i.e it will provide the user with the buttons where he/she will be able to input different values .
+
+## JAVASCRIPT 
+
+I  will use this to write my programes 
+
+##  prompt-snyc 
+
+I will be require to use the command ' npm init' to install the package.json
+I will also be required to use the command 'npm install prompt-sync' that will enable me to have the functionality of prompting on my terminal . 
+
+
+
 # week1-code-challenge
 
 
@@ -40,4 +57,12 @@
 7.I have used conditional statements to evaluate  I whether the the demerits are greater than 12 .if the demerits are greater than 12 .The driver gets his licenced cancelled else if the demerit points are less than 12 ,the program will only warn the driver.
 
 8.The program will output in the console  through the alert function.
+
+# Challenge 3: Net Salary Calculator (Toy Problem)
+
+## ## SOLUTION STEPS
+ To solve this problem,I will write a program that calculates NET SALARY and it should be a Function to calculate and display net salary
+ I will then conclude  by adding  an event listener to the calculate button that will prompt the user to enter the net salary and benefits .
+ 
+
 
